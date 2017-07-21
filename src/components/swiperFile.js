@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Actions } from 'react-native-router-flux';
-import { Button, Content } from './CommonComponents';
 import {
   ActivityIndicator,
   View,
@@ -54,7 +53,7 @@ export default class Swiper extends Component {
       );
     } else {
       return (
-        <View >
+      <View>
         <Content> Records Returned {this.state.data.length} </Content>
         <Button
         onPress={() => Actions.initial()}
