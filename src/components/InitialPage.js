@@ -6,6 +6,12 @@ import { Button, Content } from './CommonComponents';
 export default class InitialPage extends Component {
   constructor() {
     super();
+    this.state = {
+      visible: false,
+      loaded: false,
+      food: '',
+      place: ''
+    };
   }
 
   render() {
@@ -13,7 +19,42 @@ export default class InitialPage extends Component {
 
     return (
       <View style={container}>
-
+        <Content weight="500" size={35} color="white">
+          {' '}yINDER{' '}
+        </Content>
+        <Content weight="400" size={15} color="white">
+          Please enter your preferences below.
+        </Content>
+        <TextInput
+          style={textBox}
+          onChangeText={food => this.setState({ food })}
+          placeholder="What Food do you want?"
+          placeholderTextColor="#008080"
+          returnKeyType="done"
+          numberOfLines={1}
+          clearButtonMode="while-editing"
+          value={this.state.food}
+        />
+        <TextInput
+          style={textBox}
+          onChangeText={place => this.setState({ place })}
+          placeholder="Where do you want it?"
+          placeholderTextColor="#008080"
+          returnKeyType="done"
+          numberOfLines={1}
+          clearButtonMode="while-editing"
+          value={this.state.place}
+        />
+        <Button
+          onPress={() => {
+            Actions.card({
+              food: this.state.food,
+              place: this.state.place
+            });
+          }}
+        >
+          Search
+        </Button>
       </View>
     );
   }
