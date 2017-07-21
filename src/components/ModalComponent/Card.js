@@ -7,7 +7,7 @@ const height = (Dimensions.get('window').height * (390/736));
 const Card = () => {
     return (
       <View style={styles.containerStyle}>
-
+        {this.props.children}
       </View>
     );
 }
