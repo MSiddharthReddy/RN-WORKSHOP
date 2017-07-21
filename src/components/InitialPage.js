@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { Text, Button, View } from 'react-native';
+import { View } from 'react-native';
+import { Content, Button } from './CommonComponents';
 import { Actions } from 'react-native-router-flux';
 
 const InitialPage = () =>
-  <View>
-  <Text style={{ paddingTop: 100 }}> Initial </Text>
+<View style={{ paddingTop: 100 }}>
+  <Content> Initial </Content>
   <Button
   onPress={() => Actions.card()}
-  title="Next"
-  color="#841584"
-  accessibilityLabel="Learn more about this purple button"
-/>
+  > Next </Button>
 </View>;
 
 export default InitialPage;

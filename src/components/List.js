@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Text, Button, View } from 'react-native';
+import { View } from 'react-native';
+import { Content, Button } from './CommonComponents';
 import { Actions } from 'react-native-router-flux';
 
 
 const List = () =>
-  <View>
-  <Text style={{ paddingTop: 100 }}> List </Text>
-  <Button
-  onPress={() => Actions.initial()}
-  title="Next"
-  color="#841584"
-/>
+  <View style={{ paddingTop: 100 }}>
+    <Content> List </Content>
+    <Button
+    onPress={() => Actions.initial()}
+    > Next </Button>
 </View>;
 
 export default List;

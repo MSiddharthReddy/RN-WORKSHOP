@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { Text, Button, View } from 'react-native';
+import { View } from 'react-native';
+import { Content, Button } from './CommonComponents';
 import { Actions } from 'react-native-router-flux';
 
 
 const Swiper = () =>
-  <View>
-  <Text style={{ paddingTop: 100 }}> Swiper </Text>
-  <Button
-  onPress={() => Actions.list()}
-  title="Next"
-  color="#841584"
-  accessibilityLabel="Learn more about this purple button"
-/>
+<View style={{ paddingTop: 100 }}>
+    <Content> Swiper </Content>
+    <Button
+    onPress={() => Actions.list()}
+    > Next </Button>
 </View>;
 
 export default Swiper;
